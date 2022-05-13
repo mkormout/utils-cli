@@ -1,0 +1,22 @@
+{
+  "name": "utils-cli",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "u": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
+    "conf": "^10.1.2",
+    "glob": "^8.0.1",
+    "simple-git": "^3.7.1"
+  }
+}
