@@ -8,6 +8,7 @@ Handy CLI utils for everyday usage.
 ## Usage
 There are several functions with different purpose which can be split into several groups:
 ### Git Batch Operations
+Git batch operations over given <a href="https://www.npmjs.com/package/glob">Glob</a> mask!
 - gbch [options] <branch-name>   Git checkout batch operation on multiple git folders.
 - gbcm [options]                 Git commit batch operation on multiple git folders.
 - gbpl [options]                 Git pull batch operation on multiple git folders.
