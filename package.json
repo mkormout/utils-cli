@@ -17,6 +17,7 @@
     "commander": "^9.2.0",
     "conf": "^10.1.2",
     "glob": "^8.0.1",
-    "simple-git": "^3.7.1"
+    "simple-git": "^3.7.1",
+    "stringify-object": "^4.0.1"
   }
 }
