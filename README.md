@@ -6,7 +6,7 @@ Handy CLI utils for everyday usage.
 - install dependencies and the package itself `npm i -g`
 
 ## Usage
-There are several functions with different purpose which can be split into several groups:
+There are several functions with different purpose which can be split into multiple groups:
 ### Git Batch Operations
 Git batch operations over given <a href="https://www.npmjs.com/package/glob">Glob</a> mask!
 - gbch [options] <branch-name>   Git checkout batch operation on multiple git folders.
