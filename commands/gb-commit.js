@@ -7,7 +7,7 @@ module.exports = {
   options: [
     ...options,
     { flags: '-m, --message <message>', description: 'Git commit message.' },
-    { flags: '-a, --message <all>', description: 'Commit all.', default: true },
+    { flags: '-a, --all', description: 'Commit all.', default: true },
   ],
 
   action: async ({ pattern, message, all, verbose }) => {
@@ -23,7 +23,7 @@ module.exports = {
         if (all) params.push('-a')
         params.push('-n')
 
-        await git.commit(params)
+        await git.commit(message, [], params)
       }
     )
   }
