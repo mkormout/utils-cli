@@ -7,10 +7,11 @@ module.exports = {
   options: [
     ...options,
     { flags: '-m, --message <message>', description: 'Git commit message.' },
+    { flags: '-n, --noverify', description: 'Bypass pre-commit and commit-msg hooks.', default: true },
     { flags: '-a, --all', description: 'Commit all.', default: true },
   ],
 
-  action: async ({ pattern, message, all, verbose }) => {
+  action: async ({ pattern, message, all, verbose, noverify }) => {
     return processGitFolders(
       pattern,
       verbose,
@@ -21,7 +22,7 @@ module.exports = {
 
         if (message) params.push('-m', message)
         if (all) params.push('-a')
-        params.push('-n')
+        if (noverify) params.push('-n')
 
         await git.commit(message, [], params)
       }
