@@ -17,7 +17,7 @@ const execWait = (command, cwd) => new Promise((resolve, reject) => {
 })
 
 module.exports = {
-  name: 'exec',
+  name: 'glob-exec',
   description: 'Exec batch operation on multiple folders defined by Glob pattern.',
   arguments: [
     { name: '<command>', description: 'command to be executed' },
@@ -31,7 +31,7 @@ module.exports = {
     return processGlobFolders(
       pattern,
       async folder => {
-        console.log(`Running of "${chalk.blue(command)}" in ${chalk.yellow(folder)}`)
+        console.log(`Running "${chalk.blue(command)}" in ${chalk.yellow(folder)}`)
 
         if (asynchronous) {
           execWait(command, folder).then(stdout => {
