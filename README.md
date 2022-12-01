@@ -21,7 +21,8 @@ Git batch operations over given <a href="https://www.npmjs.com/package/glob">Glo
 - gbst [options]                 Git status batch operation on multiple git folders.
 - gbsu [options]                 Git submoudles update batch operation on multiple git folders.
 ### Common Utils
-- exec [options] <command>       Exec batch operation on multiple folders defined by Glob pattern.
-- json2js <src-file> <dst-file>  Converts given JSON file to JS object format file.
+- glob-exec [options] <command>  Exec batch operation on multiple folders defined by Glob pattern.
+- glob-jsonpath [options]        Performs specified "jsonpath" (see: https://www.npmjs.com/package/jsonpath) operation on given json file over multiple
+folders defined by Glob pattern.
 - list [options]                 List all files and folders in current folder
 - help [command]                 display help for command
