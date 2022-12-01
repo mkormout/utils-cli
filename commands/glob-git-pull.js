@@ -1,8 +1,8 @@
 const chalk = require('chalk')
-const { options, processGitFolders } = require('../common/gb-common')
+const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
-  name: 'gbpl',
+  name: 'glob-git-pull',
   description: 'Git pull batch operation on multiple git folders.',
   options: [
     ...options,

@@ -1,8 +1,8 @@
 const chalk = require('chalk')
-const { options, processGitFolders } = require('../common/gb-common')
+const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
-  name: 'gbch',
+  name: 'glob-git-checkout',
   description: 'Git checkout batch operation on multiple git folders.',
   arguments: [
     { name: '<branch-name>', description: 'name of desired git branch' },

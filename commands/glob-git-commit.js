@@ -1,8 +1,8 @@
 const chalk = require('chalk')
-const { options, processGitFolders } = require('../common/gb-common')
+const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
-  name: 'gbcm',
+  name: 'glob-git-commit',
   description: 'Git commit batch operation on multiple git folders.',
   options: [
     ...options,

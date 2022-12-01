@@ -1,9 +1,9 @@
 const chalk = require('chalk')
-const { options, processGitFolders } = require('../common/gb-common')
+const { options, processGitFolders } = require('../common/glob-git-common')
 const { CleanOptions } = require('simple-git')
 
 module.exports = {
-  name: 'gbrs',
+  name: 'glob-git-reset',
   description: 'Git reset batch operation on multiple git folders.',
   options: [
     ...options,
