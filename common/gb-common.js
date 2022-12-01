@@ -1,11 +1,10 @@
-const glob = require('glob')
 const chalk = require('chalk')
-
 const SimpleGit = require('simple-git');
+const { options, processGlobFolders } = require('../common/glob-common')
 
 module.exports = {
   options: [
-    { flags: '-p, --pattern <pattern>', description: 'Glob pattern to list the folders.', default: './*/' },
+    ...options,
     { flags: '-v, --verbose', description: 'Make the git operation more verbose.', default: false },
   ],
 
@@ -18,9 +17,7 @@ module.exports = {
    * @return Promise<void>
    */
   processGitFolders: async function (pattern, verbose, callback) {
-    const folders = glob.sync(pattern)
-
-    for (const folder of folders) {
+    return processGlobFolders(pattern, async folder => {
       const git = SimpleGit({ baseDir: folder })
 
       if (verbose) {
@@ -45,6 +42,6 @@ module.exports = {
       } catch (e) {
         console.log(`Error: ${chalk.red(e.message)}`)
       }
-    }
+    })
   }
 }
