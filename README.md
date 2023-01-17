@@ -8,7 +8,7 @@ Handy CLI utils for everyday usage.
 ## Usage
 There are several functions with different purpose which can be split into multiple groups:
 ### Glob Batch Operations
-Glob operations over given <a href="https://www.npmjs.com/package/glob">Glob</a> mask!
+Set of functions supporting <a href="https://www.npmjs.com/package/glob">Glob</a> mask!
 #### Git
 - **glob-git-add** [options] <files>             Git add batch operation on multiple git folders.
 - **glob-git-branch** [options] <branch-name>    Git branch batch operation on multiple git folders.
@@ -22,10 +22,12 @@ Glob operations over given <a href="https://www.npmjs.com/package/glob">Glob</a>
 - **glob-git-status** [options]                  Git status batch operation on multiple git folders.
 - **glob-git-submodule-update** [options]        Git submoudles update batch operation on multiple git folders.
 #### Other
-- **glob-exec** [options] <command>              Exec batch operation on multiple folders defined by Glob pattern.
+  - **glob-exec** [options] <command>            Exec batch operation on multiple folders defined by Glob pattern. Really handy when you want to run npm install or yarn,
+but also other bash or ps operations. One of the benefit is that there's support for sync/async calls!
 - **glob-jsonpath** [options]                    Performs specified "jsonpath" (see: https://www.npmjs.com/package/jsonpath) operation on given json file over
-multiple folders defined by Glob pattern.
+multiple folders defined by Glob pattern. It's a very powerful tool for updating JSONs over multiple folders, for example you can update a version, add dependency, decription
+in multiple local project repositories, containing package.json file. But the usage is versatile.
 ### Common
-Operations not related to Glob.
-- **list** [options]                 List all files and folders in current folder
-- **help** [command]                 display help for command
+Various common functions not related to Glob.
+- **list** [options]                 List all files and folders in current folder. Just for testing purposes.
+- **help** [command]                 Display help for command.
