@@ -3,7 +3,7 @@ const chalk = require('chalk')
 
 module.exports = {
   name: 'list',
-  description: 'List all files and folders in current folder',
+  description: 'List all files and folders in current folder. Just for testing purposes.',
   options: [
     { flags: '-f, --filter <filter>', description: 'Glob pattern.', default: '*' },
     { flags: '-l, --just-list', description: 'Print just a file list.', default: false },

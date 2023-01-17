@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-pull',
+  alias: 'ggpul',
   description: 'Git pull batch operation on multiple git folders.',
   options: [
     ...options,

@@ -4,6 +4,7 @@ const { CleanOptions } = require('simple-git')
 
 module.exports = {
   name: 'glob-git-reset',
+  alias: 'ggres',
   description: 'Git reset batch operation on multiple git folders.',
   options: [
     ...options,

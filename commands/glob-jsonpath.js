@@ -6,6 +6,7 @@ const { options, processGlobFolders } = require('../common/glob-common')
 
 module.exports = {
   name: 'glob-jsonpath',
+  alias: 'gjso',
   description: 'Performs specified "jsonpath" (see: https://www.npmjs.com/package/jsonpath) operation on given json file over multiple folders defined by Glob pattern.',
   options: [
     ...options,

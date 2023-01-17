@@ -8,11 +8,13 @@ const { program } = require('commander')
 const files = glob.sync('./commands/**/*.js', { cwd: __dirname })
 
 for (const file of files) {
-  const { name, description, arguments = [], options = [], action } = require(
+  const { name, alias, description, arguments = [], options = [], action } = require(
     path.resolve(path.join(__dirname, file))
   )
 
   const command = program.command(name)
+
+  if (alias) command.alias(alias)
 
   command.description(description)
 

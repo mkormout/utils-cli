@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-submodule-update',
+  alias: 'ggsubupd',
   description: 'Git submoudles update batch operation on multiple git folders.',
   options: [
     ...options,

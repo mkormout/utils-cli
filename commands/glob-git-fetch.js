@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-fetch',
+  alias: 'ggfet',
   description: 'Git fetch batch operation on multiple git folders.',
   options: [
     ...options,

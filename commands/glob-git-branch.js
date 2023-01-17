@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-branch',
+  alias: 'ggbra',
   description: 'Git branch batch operation on multiple git folders.',
   arguments: [
     { name: '<branch-name>', description: 'name of desired git branch' },

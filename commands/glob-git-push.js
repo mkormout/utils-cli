@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-push',
+  alias: 'ggpus',
   description: 'Git push batch operation on multiple git folders.',
   options: [
     ...options,

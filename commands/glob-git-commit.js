@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-commit',
+  alias: 'ggcom',
   description: 'Git commit batch operation on multiple git folders.',
   options: [
     ...options,

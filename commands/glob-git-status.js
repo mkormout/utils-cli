@@ -3,6 +3,7 @@ const { options, processGitFolders } = require('../common/glob-git-common')
 
 module.exports = {
   name: 'glob-git-status',
+  alias: 'ggsta',
   description: 'Git status batch operation on multiple git folders.',
   options: [
     ...options,
