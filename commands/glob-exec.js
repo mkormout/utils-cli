@@ -24,22 +24,23 @@ module.exports = {
   ],
   options: [
     ...options,
-    { flags: '-a, --asynchronous', description: 'Execute the command asynchronously.', default: true },
+    { flags: '-a, --asynchronous', description: 'Execute the command asynchronously.', default: false },
   ],
 
   action: async (command, { pattern, asynchronous }) => {
     return processGlobFolders(
       pattern,
       async folder => {
-        console.log(`Running "${chalk.blue(command)}" in ${chalk.yellow(folder)}`)
+        console.log(`Running "${chalk.blue(command)}" in ${chalk.yellow(folder)} executing ${chalk.green(asynchronous ? 'asynchronously' : 'synchronously')}`)
 
         if (asynchronous) {
           execWait(command, folder).then(stdout => {
-            console.log(`Command ${chalk.blue(command)} successfully executed in ${chalk.yellow(folder)}:`)
-            console.log(chalk.gray(stdout))
+              console.log(`Command ${chalk.blue(command)} successfully executed in ${chalk.yellow(folder)}:`)
+              console.log(chalk.gray(stdout))
           })
         } else {
-          await execWait(command, folder)
+          const result = await execWait(command, folder)
+          console.log(chalk.gray(result))
         }
       }
     )
